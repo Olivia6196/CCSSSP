@@ -2,7 +2,6 @@
 import Image from "next/image";
 import DropdownMenu from "../DropdownMenu";
 import Link from "next/link";
-import { use } from "react";
 import { usePathname } from "next/navigation";
 
 
@@ -27,8 +26,8 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="fixed z-20 w-full ">
-        <header className="flex bg-[#1B4D3E] justify-center">
+    <>
+        <header className=" h-32 flex bg-[#1B4D3E] justify-center">
             <Image
               src="/images/logo.png"
               alt="Logo image"
@@ -41,13 +40,13 @@ const Navbar = () => {
                 Catholic Community of St. Stephen’s - St. Patrick’s
             </p>
         </header>
-        <nav className="flex gap-80 px-20 py-3.5 border-b border-b-gray-400">
+        <nav className="flex gap-[25vw] px-20 py-3.5 border-b border-b-gray-400 bg-white sticky top-0 z-50 w-full">
             <ul className="hidden lg:flex gap-7 items-center font-semibold text-black/75">
           {navLinks.map((item) => (
             <li key={item.label}>
               <Link
                 href={item.href}
-                className={`bg-white text-[0.95rem] border-b-2 transition-colors ${pathname === item.href ? 'border-[#CBA72F]' : 'border-transparent'}`}
+                className={` text-[0.95rem] border-b-2 transition-colors ${pathname === item.href ? 'border-[#CBA72F]' : 'border-transparent'}`}
               >
                 {item.label}
               </Link>
@@ -56,7 +55,7 @@ const Navbar = () => {
         </ul>
            <DropdownMenu label="Explore our Parish" items={menuItems} />
         </nav>
-    </div>
+    </>
 
 
   )

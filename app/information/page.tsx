@@ -1,0 +1,91 @@
+import Image from "next/image"
+import RelatedSite from "../components/RelatedSite"
+import Link from "next/link"
+
+const page = () => {
+    const information = [
+        {
+            title:"Children’s Liturgy of the Word",
+            decription:"This is an age-appropriate Liturgy of the Word offered for ages 3 and up at the 8:30 Mass. No pre-registration is needed. All children are welcome and encouraged to attend. Just before the Liturgy of the Word begins for the assembly, children are invited to go with the weekly leader from the Church to the downstairs hall. During this special time, the volunteer leader guides the children through prayers, readings that are simplified for children and a reflection message based on the readings. The scripture readings used are the same as the assembly uses and the children are encouraged to share the message with their families after Mass."
+        },
+        {
+            title:"Intentions of the Sick",
+            decription:"If you know someone that may be ill, facing surgery, etc., you can write down the person’s name on the sheet on the small podium as you come in to Mass at both our churches, and names will be read that Sunday during the Intercessions. There’s a new sheet there every Sunday."
+        },
+        {
+            title:"WP Ecumenical Food Pantry",
+            decription:"During the month of March we are collecting pasta for the WP Ecumenical Food Pantry. There are marked baskets at the entrances of our churches. Thank you for all your food & monetary donations."
+        },
+        {
+            title:"Your Empty Bottles and Cans With Deposit Returns ",
+            decription:"It help fund The CC of St. Stephen-St. Patrick’s Youth Activities,. They can be deposited in the bin at our Whitney Point Church parking lot. Thank you for your support."
+        },
+        {
+            title:"Books to Borrow",
+            decription:"Books for our parish program can be placed in the basket at each church setting so they can be processed for borrowing. Feel free to take a book home from the pew racks! There are a variety of topics to choose from!"
+        },
+        {
+            title:"Please Pray For Our Following Friends and Family in the Military",
+            decription:"Major Corrine Miller, Sgt. Jacob Rau, Devon McGill, Joshua Lilley, PV2 James McGill, Lt. Cpl John Larkin,Jr., USMC, Sgt. Heather Fox, Brett Hayes, Captain Caleb Miller, Sgt. Megan Ballard, A1C Brendan Schneider, Kris Carstens, LC USMC Daniel Morehouse, SSG Steven Gross, USMC Staff Sgt. Dan Votra, Sgt. Nicholas Stone, Lt. Paul McDonald, Lt. Commander Marvin Joel Scott III, AF2nd Lt. Emily Steele, OS3 Jonathan Schneider, Sgt. Zachary Reardon USMC, Staff Sgt. Justin Blaisdell, Staff Sergeant Michael Hetzler, Lt. LCDR Maria Lescord, A2C Derek Lescord, Major John Thomas, Major Joy Thomas and our pastor, Lt. Colonel Douglas Cunningham. If you have a friend or family member serving our country and would like their name mentioned and to be kept in our prayers, weekly in our bulletin, please contact the parish office, 692-3911."
+        },
+        {
+            title:"If you know someone",
+            decription:"that is ill, facing surgery, or some other kind of difficulty, and needs our prayers, please call Dottie Angel at 656-9230 or Pat Canfield at 849-6978. Dottie will lead the Prayer Chain we have at The CC of St. Stephen-St. Patrick. Supporting each other with the Power of Prayer is the best medicine."
+        },
+    ]
+  return (
+    <>
+    <div className="relative h-screen min-h-150 flex justify-center text-center items-center overflow-hidden mt-5 mb-40 mx-7 bg-white rounded-3xl">
+                  <Image
+                    src="/images/history_of_faith.png"
+                    alt="history of faith"
+                    fill
+                    className="object-cover"
+                    priority
+                    quality={90}
+                  />
+    
+                  <div className="relative z-10 max-w-3xl">
+                    <h1 className="text-white text-5xl font-semibold leading-16 pb-2"
+                    style={{ fontFamily: "var(--font-newsreader)" }}
+                    >
+                      A Living History of Faith
+                    </h1>
+    
+                    <p className="text-white/75 w-lg font-semibold text-[1.12rem] leading-7 italic">Two historic parishes united in service to Christ, rooted in the heritage of St. Stephen and the spirit of St. Patrick.</p>
+                  </div>
+                </div>
+                <RelatedSite />
+                <h1 className="text-3xl">Church Information</h1>
+                <h2 className="">Welcome!</h2>
+                <ul>
+                    <li>If you are new to our parish, or have not yet registered, and would like more information about our church, please pick up a registration envelope at the entrance to each church. You will find a welcome letter, a list of contact names and numbers, a stewardship survey, and a registration form in the envelope. The forms can be completed and returned to the office, placed in the offertory baskets at any of the Masses, or given to Fr Doug. We welcome you to our church and are delighted you are with us.</li></ul>
+                <h2 className="">Church Histories</h2>
+                <ul>
+                    <li>
+                        <Link
+                        href=""
+                        >
+                            St Patrick's Church History
+                        </Link>
+                        <Link
+                        href=""
+                        >
+                            St Stephen's Church History
+                        </Link>
+                    </li>
+                </ul>
+                <h2 className="">Information</h2>
+                <ul>
+                    {information.map((item)=>
+                    <li key={item.title}>
+                        <span>{item.title}</span>
+                        {item.decription}
+                        </li>
+                    )}
+                </ul>
+                </>
+  )
+}
+
+export default page
