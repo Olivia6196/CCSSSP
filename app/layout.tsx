@@ -3,6 +3,8 @@ import "./globals.css";
 import { newsreader, PlayfairDisplay, publicSans } from "@/ui/fonts";
 import Navbar from "./components/main/Navbar";
 import Footer from "./components/main/Footer";
+import { ToastContainer } from "react-toastify/unstyled";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export const metadata: Metadata = {
@@ -24,6 +26,18 @@ export default function RootLayout({
          <Navbar />
         {children}
         <Footer />
+        <ToastContainer
+          position="top-right"
+          autoClose={4000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark" 
+        />
         </body>
     </html>
   );

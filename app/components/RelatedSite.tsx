@@ -7,9 +7,9 @@ const RelatedSite = () => {
     { label: 'OLPH - CINCINNATUS', href: '/olph' },
   ];
   return (
-    <div className="flex justify-center">
-      <div className="absolute top-[55vw] z-20">
-        <button className="text-[#003629] bg-white font-bold px-6 py-1 rounded-xl relative left-80">Related Sites</button>
+    <div className="flex flex-col md:flex-row justify-center">
+      <div className="relative lg:absolute top-0 lg:top-[55vw] z-20">
+        <button className="bg-[#003629] text-white/85 lg:text-[#003629] lg:bg-white font-bold px-6 py-1 rounded-xl relative left-80">Related Sites</button>
           <div className="flex justify-center gap-4 mt-5 bg-white rounded-full py-6 px-8 shadow-xl">
              {relatedItems.map((item)=>
              <div key={item.label} className="bg-[#540505] text-white/85 py-3 px-6 rounded-full">

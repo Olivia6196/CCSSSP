@@ -12,3 +12,4 @@ export const newsreader = Newsreader({
     subsets: ['latin'],
     variable: '--font-newsreader'
 })
+

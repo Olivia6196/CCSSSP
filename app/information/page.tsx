@@ -35,7 +35,7 @@ const page = () => {
     ]
   return (
     <>
-    <div className="relative h-screen min-h-150 flex justify-center text-center items-center overflow-hidden mt-5 mb-40 mx-7 bg-white rounded-3xl">
+    <div className="relative h-screen min-h-150 flex justify-center text-center items-center overflow-hidden mt-5 mb-28 mx-7 bg-white rounded-3xl">
                   <Image
                     src="/images/history_of_faith.png"
                     alt="history of faith"
@@ -56,34 +56,42 @@ const page = () => {
                   </div>
                 </div>
                 <RelatedSite />
-                <h1 className="text-3xl">Church Information</h1>
-                <h2 className="">Welcome!</h2>
-                <ul>
+                <div className="px-20 pb-12">
+                <h1 className="text-4xl font-semibold pb-10">Church Information</h1>
+                <h2 className="text-2xl font-medium pb-2">Welcome!</h2>
+                <div className="ml-10">
+                <ul className="list-disc text-[1.25rem] text-black/90 pb-6">
                     <li>If you are new to our parish, or have not yet registered, and would like more information about our church, please pick up a registration envelope at the entrance to each church. You will find a welcome letter, a list of contact names and numbers, a stewardship survey, and a registration form in the envelope. The forms can be completed and returned to the office, placed in the offertory baskets at any of the Masses, or given to Fr Doug. We welcome you to our church and are delighted you are with us.</li></ul>
-                <h2 className="">Church Histories</h2>
-                <ul>
+                    </div>
+                <h2 className="text-2xl font-medium pb-2">Church Histories</h2>
+                <ul className="list-disc list-inside text-[1.25rem] text-black/90 pb-6 pl-5 underline">
                     <li>
                         <Link
                         href=""
                         >
                             St Patrick's Church History
                         </Link>
-                        <Link
+                    </li>
+                    <li>
+                         <Link
                         href=""
                         >
                             St Stephen's Church History
                         </Link>
                     </li>
                 </ul>
-                <h2 className="">Information</h2>
-                <ul>
+                <h2 className="text-2xl font-medium pb-2">Information</h2>
+                <ul className="list-disc ml-10">
                     {information.map((item)=>
-                    <li key={item.title}>
-                        <span>{item.title}</span>
+                    <li key={item.title}
+                    className="text-[1.25rem] text-black/90 pb-6 ">
+                        <span className="font-medium">{item.title}</span>
+                        <br />
                         {item.decription}
                         </li>
                     )}
                 </ul>
+                </div>
                 </>
   )
 }

@@ -44,12 +44,12 @@ export default function DropdownMenu({
       </button>
 
       {isOpen && (
-        <div className="absolute mt-2 w-64 bg-white rounded-xl shadow-2xl border border-gray-200 py-2 z-50">
+        <div className="absolute right-[-3.1vw] mt-2 w-64 bg-white rounded-xl shadow-[0_0_5px_#003639] border border-gray-200 py-2 z-50">
           {items.map((item, index) => (
             <Link
               key={index}
               href={item.href}
-              className="block px-6 py-3 text-black/85 font-semibold hover:bg-gray-200  hover:border-gray-300 hover:rounded-2xl transition-colors"
+              className="block px-6 py-3 mx-2 text-black/85 font-semibold border-transparent hover:bg-gray-200  hover:border-gray-600 hover:rounded-2xl transition-colors"
               onClick={() => setIsOpen(false)}
             >
               {item.label}

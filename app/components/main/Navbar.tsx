@@ -3,17 +3,19 @@ import Image from "next/image";
 import DropdownMenu from "../DropdownMenu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 
 const Navbar = () => {
     const pathname = usePathname();
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
      const menuItems = [
-    { label: 'Our Mission Statement', href: '/mission' },
-    { label: 'Service Schedule', href: '/service' },
-    { label: 'Sacrament', href: '/sacrament' },
-    { label: 'Food Pantry', href: '/food_pantry' },
-    { label: 'Contact', href: '/contact' },
-    { label: 'Links', href: '/link' },
+    { label: 'Our Mission Statement', href: '/menu/mission' },
+    { label: 'Service Schedule', href: '/menu/service' },
+    { label: 'Sacrament', href: '/menu/sacrament' },
+    { label: 'Food Pantry', href: '/menu/food_pantry' },
+    { label: 'Contact', href: '/menu/contact' },
+    { label: 'Links', href: '/menu/link' },
   ];
 
   const navLinks =[
@@ -27,7 +29,7 @@ const Navbar = () => {
 
   return (
     <>
-        <header className=" h-32 flex bg-[#1B4D3E] justify-center">
+        <header className="hidden h-32 lg:flex bg-[#1B4D3E] justify-center">
             <Image
               src="/images/logo.png"
               alt="Logo image"
@@ -40,7 +42,7 @@ const Navbar = () => {
                 Catholic Community of St. Stephen’s - St. Patrick’s
             </p>
         </header>
-        <nav className="flex gap-[25vw] px-20 py-3.5 border-b border-b-gray-400 bg-white sticky top-0 z-50 w-full">
+        <nav className="flex gap-[25vw] pl-20 py-3.5 border-b border-b-gray-400 bg-white sticky top-0 z-50 w-full">
             <ul className="hidden lg:flex gap-7 items-center font-semibold text-black/75">
           {navLinks.map((item) => (
             <li key={item.label}>
