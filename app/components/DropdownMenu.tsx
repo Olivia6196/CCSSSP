@@ -44,7 +44,7 @@ export default function DropdownMenu({
       </button>
 
       {isOpen && (
-        <div className="absolute right-[-3.1vw] mt-2 w-64 bg-white rounded-xl shadow-[0_0_5px_#003639] border border-gray-200 py-2 z-50">
+        <div className="absolute lg:right-[-3.1vw] mt-2 w-64 bg-white rounded-xl shadow-[0_0_5px_#003639] border border-gray-200 py-2 z-50">
           {items.map((item, index) => (
             <Link
               key={index}

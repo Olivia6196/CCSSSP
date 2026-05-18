@@ -29,11 +29,11 @@ const Ministry = () => {
       style={{ fontFamily: "var(--font-newsreader)" }}>
         Ministries at a Glance
       </h1>
-      <p className="text-[1.1rem] pt-1 pb-16 text-[#404945c0] w-[48vw] font-medium">
+      <p className="text-[1.1rem] pt-1 pb-16 text-[#404945c0] lg:w-[48vw] font-medium">
         Discover the many ways our community lives out the Gospel through
         service, education, and fellowship.
       </p>
-      <div className="flex justify-center gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex justify-center gap-5">
         {groups.map((item) => (
           <div key={item.title} className="">
             <Image src={item.img} alt={item.title} width={266} height={266} />

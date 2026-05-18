@@ -76,11 +76,12 @@ const page = () => {
       <div className="flex justify-between mx-24 mb-24 mt-14">
         <div className="text-justify">
           <h2 className="text-[2rem] font-semibold pb-4">Links</h2>
-         <ul className="list-disc list-inside pl-2 text-[1.2rem] leading-8 text-black/90 underline">
+         <ul className="list-disc list-inside pl-2 text-[1.2rem] leading-8 text-black/90">
          {links.map((item)=>
            <li key={item.label}>
             <Link
              href={item.href}
+             className="border-b pb-0.5"
             >
                 {item.label}
             </Link>

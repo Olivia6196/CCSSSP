@@ -89,7 +89,7 @@ const page = () => {
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.title}>
-            <div className="relative h-screen min-h-150 flex items-center overflow-hidden mt-5 mb-40 mx-7 bg-white rounded-3xl">
+            <div className="relative h-screen min-h-150 flex items-center overflow-hidden mt-5 mb-20 lg:mb-40 mx-7 bg-white rounded-3xl">
               <Image
                 src={slide.image}
                 alt={slide.title}
@@ -114,7 +114,7 @@ const page = () => {
         ))}
       </Swiper>
       <RelatedSite />
-      <div className="flex justify-center gap-5 text-center mb-36 px-20">
+      <div className=" grid grid-cols-1 lg:flex justify-center gap-5 text-center mt-20 lg:mt-0 mb-36 mx-10 sm:mx-20">
         {features.map((item)=>
           <div key={item.title} className="group bg-gray-200 border border-gray-300 rounded-3xl py-10 px-14 hover:bg-[#003629] hover:shadow-xl">
               <item.icon size={40} className="text-[#003629] m-auto group-hover:text-[#FFE088]"/>
@@ -123,7 +123,7 @@ const page = () => {
              >
               {item.title}
               </h2>
-             <p className="w-[20vw] text-[1.1rem] font-medium leading-7 py-6 text-black/80 group-hover:text-white/70 group-hover:italic group-hover:font-light">{item.description}</p>
+             <p className="sm:m-auto sm:w-[38vw] lg:w-[20vw] text-[1.1rem] font-medium leading-7 py-6 text-black/80 group-hover:text-white/70 group-hover:italic group-hover:font-light">{item.description}</p>
              <Link 
              href={item.link}
              className="text-[1.05rem] font-medium text-[#003629] border-b-2 border-[#003629] group-hover:bg-[#FFE088] group-hover:border-0 group-hover:rounded-full group-hover:py-2 group-hover:px-4"
