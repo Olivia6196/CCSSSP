@@ -12,7 +12,7 @@ const page = () => {
       ];
   return (
     <>
-    <div className="relative h-[35vw] flex items-center overflow-hidden pl-20 mt-5 mb-32 mx-7 bg-white rounded-3xl">
+    <div className="relative lg:h-[35vw] min-h-100 flex items-center overflow-hidden pl-8 md:pl-20 mt-5 mb-20 lg:mb-32 mx-4 sm:mx-7 bg-white rounded-3xl">
                   <Image
                     src="/images/schedules.png"
                     alt="schedules"
@@ -28,7 +28,7 @@ const page = () => {
                       LITURGICAL SERVICES
                     </h1>
                     <h2
-                      className="text-white/75 text-5xl font-semibold leading-16 pb-2 italic"
+                      className="text-white/75 max-w-3xl text-3xl sm:text-5xl font-semibold md:leading-16 pb-3 sm:pb-2 italic"
                      style={{ fontFamily: "var(--font-newsreader)" }}
                     >
                        Mass & Sacramental Schedules
@@ -44,7 +44,7 @@ const page = () => {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col md:flex-row justify-center">
+                <div className="hidden lg:flex justify-center">
       <div className="relative lg:absolute top-0 lg:top-[43vw] z-20">
         <button className="bg-[#003629] text-white/85 lg:text-[#003629] lg:bg-white font-bold px-6 py-1 rounded-xl relative left-80">Related Sites</button>
           <div className="flex justify-center gap-4 mt-5 bg-white rounded-full py-6 px-8 shadow-xl">
@@ -61,8 +61,28 @@ const page = () => {
           </div>
         </div>
         </div>
-        <h2 className="text-[2rem] font-bold pb-5 text-center text-black/80">Schedules</h2>
-        <p className="text-lg text-center leading-7 font-medium text-black/70">
+
+          <div className="flex lg:hidden justify-center text-center mx-3">
+      <div className="">
+        <button className=" font-bold px-6 py-3 lg:py-1 rounded-xl text-2xl ">Related Sites</button>
+          <div className="flex flex-col md:flex-row justify-center gap-20 md:gap-4 mt-7 sm:mt-10 py-6 px-1 md:px-2">
+             {relatedItems.map((item)=>
+             <div key={item.label}>
+              <Link
+                href={item.href}
+                className={` text-[0.9rem] py-7 sm:py-10 md:px-5 px-16 rounded-full text-white/85 font-medium transition-colors ${pathname === item.href ? 'bg-[#003629]' : 'bg-[#540505]'}`}
+              >
+                 {item.label}
+              </Link>
+             </div>
+            )}
+          </div>
+        </div>
+        </div>
+        
+        <div className="mt-20 lg:mt-0 mx-4 sm:mx-10 md:mx-20 ">
+        <h2 className="text-[2rem] font-bold pb-5 text-center text-black/80 ">Schedules</h2>
+        <p className="text-lg text-center leading-9 md:leading-7 font-medium text-black/70">
             Mass Schedules
             <br />
             Saturday Vigil 5:00 PM – St. Stephen
@@ -87,6 +107,7 @@ const page = () => {
             height={300}
             className="rounded-3xl"
             />
+          </div>
           </div>
                 </>
   )

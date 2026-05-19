@@ -43,13 +43,13 @@ export default function Form() {
 
   return (
     <>
-      <div className="max-w-xl mx-auto bg-white rounded-lg py-4 px-6 shadow">
-        <h2 className="text-2xl font-semibold mb-8 text-[#003629]" style={{ fontFamily: "var(--font-playfair-display)" }}>
+      <div className="w-full lg:max-w-xl mx-auto bg-white rounded-lg py-4 px-6 shadow">
+        <h2 className="text-[1.45rem] sm:text-2xl font-semibold mb-8 text-[#003629]" style={{ fontFamily: "var(--font-playfair-display)" }}>
          Send Us a Message Today!
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-5">
-          <div className="flex gap-5">
+          <div className="flex flex-col md:flex-row gap-5 w-full">
           <div>
             <label htmlFor="name" className="block text-[1.1rem] font-normal  mb-1.5">
               Name
@@ -63,7 +63,7 @@ export default function Form() {
               required
               placeholder="John Doe"
               disabled={isSubmitting}
-              className="w-full lg:w-[18vw] lg:h-14 px-4 py-3 bg-zinc-5 border border-zinc-200  rounded-xl focus:outline-none focus:ring-2 focus:ring-[#003629] focus:border-transparent transition-all duration-200 disabled:opacity-70"
+              className="w-full md:w-[40vw] md:h-16 lg:w-[18vw] lg:h-14 px-4 py-3 bg-zinc-5 border border-zinc-200  rounded-xl focus:outline-none focus:ring-2 focus:ring-[#003629] focus:border-transparent transition-all duration-200 disabled:opacity-70"
             />
           </div>
 
@@ -80,11 +80,11 @@ export default function Form() {
               required
               placeholder="you@example.com"
               disabled={isSubmitting}
-              className="w-full lg:w-[18vw] lg:h-14 px-4 py-3 border border-zinc-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#003629] focus:border-transparent transition-all duration-200 disabled:opacity-70"
+              className="w-full md:w-[40vw] md:h-16 lg:w-[18vw] lg:h-14 px-4 py-3 border border-zinc-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#003629] focus:border-transparent transition-all duration-200 disabled:opacity-70"
             />
           </div>
           </div>
-           <div className="flex gap-5">
+           <div className="flex flex-col md:flex-row gap-5">
           <div>
             <label htmlFor="website" className="block text-[1.1rem] font-normal mb-1.5">
               Website(optional)
@@ -97,7 +97,7 @@ export default function Form() {
               onChange={handleChange}
               placeholder="https://yourwebsite.com"
               disabled={isSubmitting}
-              className="w-full lg:w-[18vw] lg:h-14 px-4 py-3 border border-zinc-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#003629] focus:border-transparent transition-all duration-200 disabled:opacity-70"
+              className="w-full md:w-[40vw] md:h-16 lg:w-[18vw] lg:h-14 px-4 py-3 border border-zinc-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#003629] focus:border-transparent transition-all duration-200 disabled:opacity-70"
             />
           </div>
 
@@ -115,7 +115,7 @@ export default function Form() {
               rows={5}
               placeholder="how can we help you?"
               disabled={isSubmitting}
-              className="w-full lg:w-[18vw] px-4 py-3  border border-zinc-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#003629] focus:border-transparent lg:h-14 transition-all duration-200 disabled:opacity-70 resize-none overflow-hidden"
+              className="w-full md:w-[40vw] md:h-16 lg:w-[18vw] px-4 py-3  border border-zinc-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#003629] focus:border-transparent lg:h-14 transition-all duration-200 disabled:opacity-70 resize-none overflow-hidden"
             />
           </div>
           </div>
@@ -124,7 +124,7 @@ export default function Form() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="group relative w-32 overflow-hidden border border-[#003629] bg-[#003629] text-white  hover:text-[#003629] font-semibold py-2 px-3 rounded-full text-lg transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-70"
+            className="group relative sm:left-[38%] w-32 overflow-hidden border border-[#003629] bg-[#003629] text-white  hover:text-[#003629] font-semibold py-2 px-3 rounded-full text-lg transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-70"
           >
             {/* Background fill layer */}
             <span className="absolute  bg-white inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" />

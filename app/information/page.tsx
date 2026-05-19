@@ -35,7 +35,7 @@ const page = () => {
     ]
   return (
     <>
-    <div className="relative h-screen min-h-150 flex justify-center text-center items-center overflow-hidden mt-5 mb-28 mx-7 bg-white rounded-3xl">
+    <div className="relative lg:h-screen min-h-100 flex justify-center text-center items-center overflow-hidden mt-5 mb-20 lg:mb-28 mx-3 sm:mx-7 bg-white rounded-3xl">
                   <Image
                     src="/images/history_of_faith.png"
                     alt="history of faith"
@@ -46,20 +46,20 @@ const page = () => {
                   />
     
                   <div className="relative z-10 max-w-3xl">
-                    <h1 className="text-white text-5xl font-semibold leading-16 pb-2"
+                    <h1 className="text-white text-3xl sm:text-5xl font-semibold sm:leading-16 pb-7 sm:pb-5 lg:pb-2"
                     style={{ fontFamily: "var(--font-newsreader)" }}
                     >
                       A Living History of Faith
                     </h1>
     
-                    <p className="text-white/75 w-lg font-semibold text-[1.12rem] leading-7 italic">Two historic parishes united in service to Christ, rooted in the heritage of St. Stephen and the spirit of St. Patrick.</p>
+                    <p className="text-white/75 px-2 sm:w-lg font-semibold text-[1.12rem] leading-7 italic">Two historic parishes united in service to Christ, rooted in the heritage of St. Stephen and the spirit of St. Patrick.</p>
                   </div>
                 </div>
                 <RelatedSite />
-                <div className="px-20 pb-12">
+                <div className=" pl-4 pr-5 sm:px-10 lg:px-20 pb-12 mt-12 sm:mt-24 lg:mt-0">
                 <h1 className="text-4xl font-semibold pb-10">Church Information</h1>
                 <h2 className="text-2xl font-medium pb-2">Welcome!</h2>
-                <div className="ml-10">
+                <div className="ml-4 sm:ml-10 text-justify sm:text-left">
                 <ul className="list-disc text-[1.25rem] text-black/90 pb-6">
                     <li>If you are new to our parish, or have not yet registered, and would like more information about our church, please pick up a registration envelope at the entrance to each church. You will find a welcome letter, a list of contact names and numbers, a stewardship survey, and a registration form in the envelope. The forms can be completed and returned to the office, placed in the offertory baskets at any of the Masses, or given to Fr Doug. We welcome you to our church and are delighted you are with us.</li></ul>
                     </div>
@@ -81,7 +81,7 @@ const page = () => {
                     </li>
                 </ul>
                 <h2 className="text-2xl font-medium pb-2">Information</h2>
-                <ul className="list-disc ml-10">
+                <ul className="list-disc ml-4 sm:ml-10 text-justify sm:text-left">
                     {information.map((item)=>
                     <li key={item.title}
                     className="text-[1.25rem] text-black/90 pb-6 ">

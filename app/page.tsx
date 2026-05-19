@@ -89,7 +89,7 @@ const page = () => {
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.title}>
-            <div className="relative h-screen min-h-150 flex items-center overflow-hidden mt-5 mb-20 lg:mb-40 mx-7 bg-white rounded-3xl">
+            <div className="relative lg:h-screen min-h-100 flex items-center overflow-hidden mt-5 mb-20 lg:mb-40 mx-3 sm:mx-7 bg-white rounded-3xl">
               <Image
                 src={slide.image}
                 alt={slide.title}
@@ -100,21 +100,21 @@ const page = () => {
               />
               <div className="absolute inset-0 bg-[#003629b2]" />
 
-              <div className="relative pl-20 z-10 max-w-3xl">
-                <h1 className="text-white text-5xl font-semibold leading-16 pb-2"
+              <div className="relative px-5  md:pl-20 z-10 max-w-3xl">
+                <h1 className="text-white text-3xl sm:text-5xl font-semibold md:leading-16 pb-6 sm:pb-2"
                 style={{ fontFamily: "var(--font-newsreader)" }}
                 >
                   {slide.title}
                 </h1>
 
-                <p className="text-white/75 w-lg font-semibold text-[1.05rem] leading-7">{slide.description}</p>
+                <p className="text-white/75 w-full sm:w-lg font-semibold text-[1.05rem] leading-7">{slide.description}</p>
               </div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
       <RelatedSite />
-      <div className=" grid grid-cols-1 lg:flex justify-center gap-5 text-center mt-20 lg:mt-0 mb-36 mx-10 sm:mx-20">
+      <div className=" grid grid-cols-1 lg:flex justify-center gap-5 text-center mt-20 lg:mt-0 mb-36 mx-4 sm:mx-10 md:mx-20">
         {features.map((item)=>
           <div key={item.title} className="group bg-gray-200 border border-gray-300 rounded-3xl py-10 px-14 hover:bg-[#003629] hover:shadow-xl">
               <item.icon size={40} className="text-[#003629] m-auto group-hover:text-[#FFE088]"/>

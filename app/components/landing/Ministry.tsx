@@ -24,7 +24,7 @@ const Ministry = () => {
     },
   ];
   return (
-    <div className="px-20 mb-28">
+    <div className="px-4 sm:px-12 lg:px-20 mb-28">
       <h1 className="text-[2rem] font-semibold text-[#003629]" 
       style={{ fontFamily: "var(--font-newsreader)" }}>
         Ministries at a Glance
@@ -36,7 +36,8 @@ const Ministry = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex justify-center gap-5">
         {groups.map((item) => (
           <div key={item.title} className="">
-            <Image src={item.img} alt={item.title} width={266} height={266} />
+            <Image src={item.img} alt={item.title} width={266} height={266} 
+            className="h-[80vw] w-[95vw] md:w-80 md:h-80 lg:w-66.5 lg:h-66.5"/>
             <h2
               className="text-2xl text-[#003629] pt-3 pb-1 font-medium"
               style={{ fontFamily: "var(--font-newsreader)" }}

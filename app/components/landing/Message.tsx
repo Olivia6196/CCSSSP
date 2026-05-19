@@ -2,16 +2,16 @@ import Image from "next/image";
 
 const Message = () => {
   return (
-    <div className="flex flex-col lg:flex-row justify-center gap-20 px-20 mb-28">
+    <div className="flex flex-col lg:flex-row justify-center gap-2 sm:gap-20 px-4 sm:px-12 lg:px-20 mb-28">
       <div className="relative">
         <Image
           src="/images/rev.png"
           alt="A Rev.fr"
           width={528}
           height={660}
-          className="rounded-3xl"
+          className="rounded-3xl "
         />
-        <p className="absolute bottom-[-3vw] right-[-4vw]  bg-[#540505] px-6 py-14 rounded-4xl text-white w-[25vw] lg:w-[15vw] flex flex-col text-[1.3rem] tracking-wide">
+        <p className="hidden sm:absolute bottom-[-3vw] right-[3vw] lg:right-[-4vw]  bg-[#540505] px-6 py-14 rounded-4xl text-white w-[25vw] lg:w-[15vw] sm:flex flex-col text-[1.3rem] tracking-wide">
           <span
             className="text-[#FFE088] text-4xl mb-[-1vw]"
             style={{ fontFamily: "var(--font-newsreader)" }}
