@@ -12,7 +12,7 @@ const page = () => {
       ];
   return (
     <>
-    <div className="relative lg:h-[35vw] min-h-100 flex items-center overflow-hidden pl-8 md:pl-20 mt-5 mb-20 lg:mb-32 mx-4 sm:mx-7 bg-white rounded-3xl">
+    <div className="relative lg:h-[35vw] min-h-100 flex items-center overflow-hidden pl-8 md:pl-20 mt-5 mb-20 lg:mb-32 mx-3 sm:mx-7 bg-white rounded-3xl">
                   <Image
                     src="/images/schedules.png"
                     alt="schedules"

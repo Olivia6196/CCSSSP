@@ -9,7 +9,7 @@ const Message = () => {
           alt="A Rev.fr"
           width={528}
           height={660}
-          className="rounded-3xl "
+          className="rounded-3xl"
         />
         <p className="hidden sm:absolute bottom-[-3vw] right-[3vw] lg:right-[-4vw]  bg-[#540505] px-6 py-14 rounded-4xl text-white w-[25vw] lg:w-[15vw] sm:flex flex-col text-[1.3rem] tracking-wide">
           <span
