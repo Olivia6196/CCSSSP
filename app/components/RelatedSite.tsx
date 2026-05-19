@@ -31,7 +31,7 @@ const RelatedSite = () => {
 
         <div className="flex lg:hidden justify-center text-center mx-3">
       <div className="">
-        <button className=" font-bold px-6 py-3 lg:py-1 rounded-xl text-2xl ">Related Sites</button>
+        <button className=" font-bold px-6 py-3 lg:py-1 rounded-xl text-2xl text-[#003629]">Related Sites</button>
           <div className="flex flex-col md:flex-row justify-center gap-20 md:gap-4 mt-7 sm:mt-10 py-6 px-1 md:px-2">
              {relatedItems.map((item)=>
              <div key={item.label}>
