@@ -48,7 +48,7 @@ const Navbar = () => {
       </header>
 
       {/* Main Navbar */}
-      <nav className="flex items-center justify-between bg-[#003629] lg:bg-white border-b border-b-gray-400 sticky top-0 z-50 w-full px-5 sm:px-10 lg:px-20 py-2 lg:py-3.5">
+      <nav className="flex items-center justify-between bg-[#003629] lg:bg-white border-b border-b-gray-400 sticky top-0 z-50 w-full px-5 sm:px-10 lg:px-20 py-1.5 lg:py-3.5">
         
         {/* Logo - Left Side (Now visible on all screens) */}
         <div className="flex lg:hidden items-center">
