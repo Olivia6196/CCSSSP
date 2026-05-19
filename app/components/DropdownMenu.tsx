@@ -36,7 +36,7 @@ export default function DropdownMenu({
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-4 py-1.5 bg-[#003629] hover:bg-green-900 hover:shadow-[0_0_10px_#CBA72F] text-white font-medium rounded-3xl transition-all active:scale-95"
+        className="flex items-center gap-2 px-4 py-1.5 bg-white text-[#003629] lg:bg-[#003629] lg:hover:bg-green-900 hover:shadow-[0_0_10px_#CBA72F] lg:text-white font-medium rounded-3xl transition-all active:scale-95"
       >
         {label}
         <span className={`transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}>
