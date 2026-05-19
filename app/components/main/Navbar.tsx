@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Top Header - Your Original */}
+      {/* Top Header - Unchanged */}
       <header className="hidden h-28 lg:flex bg-[#1B4D3E] justify-center items-center gap-6">
         <Image
           src="/images/logo.png"
@@ -47,22 +47,23 @@ const Navbar = () => {
         </p>
       </header>
 
-      {/* Main Navbar - Closer to your original layout */}
-      <nav className="flex gap-[20vw] px-20 py-3.5 border-b border-b-gray-400 bg-white sticky top-0 z-50 w-full">
+      {/* Main Navbar */}
+      <nav className="flex items-center justify-between bg-white border-b border-b-gray-400 sticky top-0 z-50 w-full px-5 sm:px-10 lg:px-20 py-3.5">
         
-        {/* Logo on Left (Mobile + Desktop) */}
-        <div className="flex items-center lg:hidden">
+        {/* Logo - Left Side (Now visible on all screens) */}
+        <div className="flex lg:hidden items-center">
           <Link href="/">
             <Image
               src="/images/logo.png"
               alt="St. Stephen’s Logo"
               width={65}
               height={65}
+              className="object-contain"
             />
           </Link>
         </div>
 
-        {/* Desktop Navigation Links */}
+        {/* Desktop Navigation Links - Unchanged */}
         <ul className="hidden lg:flex gap-7 items-center font-semibold text-black/75">
           {navLinks.map((item) => (
             <li key={item.label}>
@@ -78,22 +79,25 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Explore Dropdown - Kept on the right as in your original */}
-        <div className="block ml-auto">
-          <DropdownMenu label="Explore our Parish" items={menuItems} />
-        </div>
+        {/* Right Side: Explore Button + Hamburger (Mobile + Tablet) */}
+        <div className="flex items-center gap-3 md:gap-4">
+          {/* Explore our Parish Button */}
+          <div className="block">
+            <DropdownMenu label="Explore our Parish" items={menuItems} />
+          </div>
 
-        {/* Hamburger - Right Side (Mobile Only) */}
-        <button
-          className="lg:hidden text-3xl text-gray-700 ml-auto"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {isMobileMenuOpen ? <IoMdClose  className="hidden"/> : <FiMenu />}
-        </button>
+          {/* Hamburger Menu */}
+          <button
+            className="lg:hidden text-3xl text-gray-700"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? <IoMdClose className="hidden"/> : <FiMenu />}
+          </button>
+        </div>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Unchanged logic */}
       {isMobileMenuOpen && (
         <div 
           className="lg:hidden fixed inset-0 bg-black/60 z-60" 
@@ -120,8 +124,6 @@ const Navbar = () => {
                   {item.label}
                 </Link>
               ))}
-
-              
             </nav>
           </div>
         </div>
