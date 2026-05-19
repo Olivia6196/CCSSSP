@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Message = () => {
   return (
-    <div className="flex flex-col lg:flex-row justify-center gap-2 sm:gap-20 px-4 sm:px-12 lg:px-20 mb-28">
+    <div className="flex flex-col lg:flex-row justify-center gap-2 sm:gap-20 px-4 sm:px-12 lg:px-20 mb-20 md:mb-28">
       <div className="relative">
         <Image
           src="/images/rev.png"

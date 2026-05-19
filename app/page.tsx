@@ -114,7 +114,7 @@ const page = () => {
         ))}
       </Swiper>
       <RelatedSite />
-      <div className=" grid grid-cols-1 lg:flex justify-center gap-5 text-center mt-20 lg:mt-0 mb-36 mx-4 sm:mx-10 md:mx-20">
+      <div className=" grid grid-cols-1 lg:flex justify-center gap-5 text-center mt-20 lg:mt-0 mb-20 md:mb-36 mx-4 sm:mx-10 md:mx-20">
         {features.map((item)=>
           <div key={item.title} className="group bg-gray-200 border border-gray-300 rounded-3xl py-10 px-14 hover:bg-[#003629] hover:shadow-xl">
               <item.icon size={40} className="text-[#003629] m-auto group-hover:text-[#FFE088]"/>
