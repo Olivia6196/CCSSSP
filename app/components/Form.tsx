@@ -63,7 +63,7 @@ export default function Form() {
               required
               placeholder="John Doe"
               disabled={isSubmitting}
-              className="w-full md:w-[40vw] md:h-16 lg:w-[18vw] lg:h-14 px-4 py-3 bg-zinc-5 border border-zinc-200  rounded-xl focus:outline-none focus:ring-2 focus:ring-[#003629] focus:border-transparent transition-all duration-200 disabled:opacity-70"
+              className="w-full md:w-[40vw] md:h-16 lg:w-[18vw] lg:h-14 px-4 py-3 bg-zinc-5 border border-gray-400  rounded-xl focus:outline-none focus:ring-2 focus:ring-[#003629] focus:border-transparent transition-all duration-200 disabled:opacity-70"
             />
           </div>
 
@@ -80,7 +80,7 @@ export default function Form() {
               required
               placeholder="you@example.com"
               disabled={isSubmitting}
-              className="w-full md:w-[40vw] md:h-16 lg:w-[18vw] lg:h-14 px-4 py-3 border border-zinc-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#003629] focus:border-transparent transition-all duration-200 disabled:opacity-70"
+              className="w-full md:w-[40vw] md:h-16 lg:w-[18vw] lg:h-14 px-4 py-3 border border-gray-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#003629] focus:border-transparent transition-all duration-200 disabled:opacity-70"
             />
           </div>
           </div>
@@ -97,7 +97,7 @@ export default function Form() {
               onChange={handleChange}
               placeholder="https://yourwebsite.com"
               disabled={isSubmitting}
-              className="w-full md:w-[40vw] md:h-16 lg:w-[18vw] lg:h-14 px-4 py-3 border border-zinc-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#003629] focus:border-transparent transition-all duration-200 disabled:opacity-70"
+              className="w-full md:w-[40vw] md:h-16 lg:w-[18vw] lg:h-14 px-4 py-3 border border-gray-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#003629] focus:border-transparent transition-all duration-200 disabled:opacity-70"
             />
           </div>
 
@@ -115,7 +115,7 @@ export default function Form() {
               rows={5}
               placeholder="how can we help you?"
               disabled={isSubmitting}
-              className="w-full md:w-[40vw] md:h-16 lg:w-[18vw] px-4 py-3  border border-zinc-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#003629] focus:border-transparent lg:h-14 transition-all duration-200 disabled:opacity-70 resize-none overflow-hidden"
+              className="w-full md:w-[40vw] md:h-16 lg:w-[18vw] px-4 py-3  border border-gray-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#003629] focus:border-transparent lg:h-14 transition-all duration-200 disabled:opacity-70 resize-none overflow-hidden"
             />
           </div>
           </div>
