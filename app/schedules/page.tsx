@@ -70,7 +70,7 @@ const page = () => {
              <div key={item.label}>
               <Link
                 href={item.href}
-                className={` text-[0.9rem] py-7 sm:py-10 md:px-5 px-16 rounded-full text-white/85 font-medium transition-colors ${pathname === item.href ? 'bg-[#003629]' : 'bg-[#540505]'}`}
+                className={` text-[0.9rem] py-5 md:px-5 px-16 rounded-full text-white/85 font-medium transition-colors ${pathname === item.href ? 'bg-[#003629]' : 'bg-[#540505]'}`}
               >
                  {item.label}
               </Link>
