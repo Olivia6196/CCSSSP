@@ -35,7 +35,7 @@ const page = () => {
       <RelatedSite />
        <div className="text-justify mx-4 sm:mx-10 lg:mx-20 mb-16 mt-16 lg:mt-0">
           <h2 className="text-[2rem] font-semibold pb-4">Parish Staff</h2>
-         <ul className="list-disc list-inside md:pl-5 text-[1.2rem] leading-8 text-black/90 mb-12">
+         <ul className="list-disc list-inside md:pl-5 text-lg md:text-[1.2rem] leading-8 text-black/90 mb-12">
             <li>Administrator – Rev. James Serowik</li>
             <li>Parish Council President – Linda Crowley</li>
             <li>Vice-President – Terri Fedele</li>
