@@ -6,7 +6,7 @@ import Staff from "../../Staff"
 const page = () => {
   return (
     <>
-    <div className="relative h-screen min-h-150 flex justify-center text-center items-center overflow-hidden mt-5 mb-24 mx-7 bg-white rounded-3xl">
+    <div className="relative lg:h-screen min-h-100 flex justify-center text-center items-center overflow-hidden mt-5 mb-16 lg:mb-24 mx-4 sm:mx-7 bg-white rounded-3xl">
         <Image
           src="/images/OLPH.png"
           alt="OLPH"
@@ -19,23 +19,23 @@ const page = () => {
          
         <div className="relative z-10 max-w-3xl">
           <h1
-            className="text-[#003629] text-[3.5rem] font-semibold leading-16 pb-2"
+            className="text-[#003629] text-3xl md:text-[3.5rem] font-semibold lg:leading-16 lg:pb-2 p-4"
             style={{ fontFamily: "var(--font-newsreader)" }}
           >
             OLPH - Cincinnatus
           </h1>
 
           <p className="text-black font-semibold text-[1.12rem] leading-7 text-center">
-           Our Lady of Perpetual Help
+           Our Lady of Perpetual Help,
            <br />
           2708 Lower Cincinnatus Road Cincinnatus, NY 13040
           </p>
         </div>
       </div>
       <RelatedSite />
-       <div className="text-justify mx-20 mb-16">
+       <div className="text-justify mx-4 sm:mx-10 lg:mx-20 mb-16 mt-16 lg:mt-0">
           <h2 className="text-[2rem] font-semibold pb-4">Parish Staff</h2>
-         <ul className="list-disc list-inside pl-5 text-[1.2rem] leading-8 text-black/90 mb-12">
+         <ul className="list-disc list-inside md:pl-5 text-[1.2rem] leading-8 text-black/90 mb-12">
             <li>Administrator – Rev. James Serowik</li>
             <li>Parish Council President – Linda Crowley</li>
             <li>Vice-President – Terri Fedele</li>

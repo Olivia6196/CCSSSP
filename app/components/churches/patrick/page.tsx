@@ -6,7 +6,7 @@ import Staff from "../../Staff"
 const page = () => {
   return (
     <>
-    <div className="relative h-screen min-h-150 flex justify-center text-center items-center overflow-hidden mt-5 mb-24 mx-7 bg-white rounded-3xl">
+    <div className="relative lg:h-screen min-h-100 flex justify-center text-center items-center overflow-hidden mt-5 mb-16 md:mb-24 mx-4 sm:mx-7 bg-white rounded-3xl">
         <Image
           src="/images/st_patrick.png"
           alt="st. Patrick"
@@ -19,13 +19,13 @@ const page = () => {
 
         <div className="relative z-10 max-w-3xl">
           <h1
-            className="text-white text-[3.5rem] font-semibold leading-16 pb-2"
+            className="text-white text-3xl  md:text-[3.5rem] font-semibold leading-10 md:leading-16 pb-2"
             style={{ fontFamily: "var(--font-newsreader)" }}
           >
             St. Patrick’s Withney PT
           </h1>
 
-          <p className="text-white/85 font-semibold text-[1.12rem] leading-7 text-center">
+          <p className="text-white/85 font-semibold text-[1.12rem] leading-7 text-center px-2 md:px-0">
            Saint Patrick’s Church 59 Keibel Rd Whitney Point, NY Parish office:
            <br />
            P.O. Box 711 59 Keibel Rd Whitney Point, NY 

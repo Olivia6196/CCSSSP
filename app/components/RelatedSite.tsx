@@ -19,7 +19,7 @@ const RelatedSite = () => {
              <div key={item.label}>
               <Link
                 href={item.href}
-                className={` text-[0.9rem] py-10 lg:py-3 px-6 rounded-full text-white/85 font-medium transition-colors ${pathname === item.href ? 'bg-[#003629]' : 'bg-[#540505]'}`}
+                className={` text-[0.9rem] py-3 px-6 rounded-full text-white/85 font-medium transition-colors ${pathname === item.href ? 'bg-[#003629]' : 'bg-[#540505]'}`}
               >
                  {item.label}
               </Link>
@@ -32,12 +32,12 @@ const RelatedSite = () => {
         <div className="flex lg:hidden justify-center text-center mx-3">
       <div className="">
         <button className=" font-bold px-6 py-3 lg:py-1 rounded-xl text-2xl text-[#003629]">Related Sites</button>
-          <div className="flex flex-col md:flex-row justify-center gap-20 md:gap-4 mt-7 sm:mt-10 py-6 px-1 md:px-2">
+          <div className="flex flex-col md:flex-row justify-center gap-14 md:gap-4 mt-5 sm:mt-7 py-6 px-1 md:px-2">
              {relatedItems.map((item)=>
              <div key={item.label}>
               <Link
                 href={item.href}
-                className={` text-[0.9rem] py-7 sm:py-10 md:px-5 px-16 rounded-full text-white/85 font-medium transition-colors ${pathname === item.href ? 'bg-[#003629]' : 'bg-[#540505]'}`}
+                className={` text-[0.9rem] py-5 md:px-5 px-16 rounded-full text-white/85 font-medium transition-colors ${pathname === item.href ? 'bg-[#003629]' : 'bg-[#540505]'}`}
               >
                  {item.label}
               </Link>
