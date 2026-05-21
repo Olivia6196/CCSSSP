@@ -71,11 +71,11 @@ const NewsPage = async ({ searchParams }: { searchParams: Props }) => {
         </div>
       </div>
       <Sites />
-      <main className="max-w-4xl mx-4 sm:mx-10 lg:mx-20 px-6 py-10">
+      <main className="md:w-[80vw] mx-4 sm:mx-10 lg:mx-20 my-10">
         <h1 className="text-3xl font-bold mb-6">News & Events</h1>
 
         {/* POSTS */}
-        <div className="space-y-8">
+        <div className="space-y-8 ">
           {paginatedPosts.map((post) => {
             const date = new Date(post.date);
 
@@ -94,7 +94,7 @@ const NewsPage = async ({ searchParams }: { searchParams: Props }) => {
                     </div>
                   </div>
                   <div>
-                    <h2 className="text-xl font-medium underline">
+                    <h2 className="text-xl font-medium underline hover:text-[#cc2023] transition-colors">
                       {post.title}
                     </h2>
                   </div>
@@ -116,7 +116,7 @@ const NewsPage = async ({ searchParams }: { searchParams: Props }) => {
                 />
 
                 <Link
-                  href={`/news/${post.slug}`}
+                  href={`/news/${post.id}`}
                   className="inline-block mt-2 underline text-lg"
                 >
                   Continue...
@@ -127,22 +127,22 @@ const NewsPage = async ({ searchParams }: { searchParams: Props }) => {
         </div>
 
         {/* PAGINATION */}
-        <div className="flex justify-between mt-16 border-t pt-6">
+        <div className="flex justify-between mt-16 border-t border-[#bbbab6] pt-6">
           {/* PREVIOUS */}
           {hasPrev ? (
             <Link
               href={`/news?page=${currentPage - 1}`}
-              className="underline text-lg flex items-center gap-1"
+             className="text-white bg-[#003629] rounded-full border border-white py-1.5 px-5 font-medium flex items-center gap-1 shadow-[0_0_6px_#ffdf88bb]"
             >
-              <FaArrowLeft />
               Previous
+               <FaArrowLeft />
             </Link>
           ) : (
             <div />
           )}
 
           {/* PAGE INFO */}
-          <p className="text-gray-600">
+          <p className="text-[#003629] font-medium">
             Page {currentPage} of {totalPages}
           </p>
 
@@ -150,7 +150,7 @@ const NewsPage = async ({ searchParams }: { searchParams: Props }) => {
           {hasNext ? (
             <Link
               href={`/news?page=${currentPage + 1}`}
-              className="underline text-lg flex items-center gap-1"
+              className="text-[#003629] bg-white rounded-full border border-[#003629] py-1 px-6 font-medium flex items-center gap-1 shadow-[0_0_6px_#003629a1]"
             >
               Next
               <FaArrowRight />
