@@ -5,7 +5,7 @@ import Image from "next/image";
 const page = () => {
   return (
     <>
-      <div className="relative h-screen min-h-150 flex justify-center text-center items-center overflow-hidden mt-5 mb-24 mx-7 bg-white rounded-3xl">
+      <div className="relative lg:h-screen min-h-100 flex justify-center text-center items-center overflow-hidden mt-5 mb-16 lg:mb-24 mx-4 sm:mx-7 bg-white rounded-3xl">
         <Image
           src="/images/hero_img6.png"
           alt="contact"
@@ -18,19 +18,19 @@ const page = () => {
 
         <div className="relative z-10 max-w-3xl">
           <h1
-            className="text-white text-[3.5rem] font-semibold leading-16 pb-2"
+            className="text-white text-3xl md:text-[3.5rem] font-semibold leading-16 pb-2"
             style={{ fontFamily: "var(--font-newsreader)" }}
           >
             Contact
           </h1>
 
-          <p className="text-white/75 w-lg font-semibold text-[1.12rem] leading-7 italic">
+          <p className="text-white/75 lg:w-lg font-semibold text-[1.12rem] leading-7 italic px-1">
             “Connect with our Faith Family”
           </p>
         </div>
       </div>
       <RelatedSite />
-      <div className="flex justify-between mx-20 mb-24 mt-14">
+      <div className="flex flex-col lg:flex-row justify-between gap-16 lg:gap-0 mx-4 sm:mx-10 lg:mx-20 mb-24 mt-14">
         <div className="text-justify">
           <h2 className="text-[2rem] font-semibold pb-4">Contact</h2>
          <ul className="list-disc ml-7 text-[1.2rem] leading-8 text-black/90">
