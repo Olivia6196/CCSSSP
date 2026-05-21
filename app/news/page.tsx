@@ -1,9 +1,31 @@
 import Image from "next/image";
 import Link from "next/link";
 import Sites from "../components/Sites";
-import { newsEvents } from "@/lib/newsData";
+import { getPosts } from "@/lib/posts";
+import { IoIosArrowForward } from "react-icons/io";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-const page = () => {
+const POSTS_PER_PAGE = 25;
+
+type Props = Promise<{
+  page?: string;
+}>;
+
+const NewsPage = async ({ searchParams }: { searchParams: Props }) => {
+  const currentPage = Number((await searchParams).page ?? 1);
+
+  const posts = getPosts();
+
+  const start = (currentPage - 1) * POSTS_PER_PAGE;
+  const end = start + POSTS_PER_PAGE;
+
+  const paginatedPosts = posts.slice(start, end);
+
+  const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
+
+  const hasNext = currentPage < totalPages;
+  const hasPrev = currentPage > 1;
+
   return (
     <>
       <div className="relative lg:h-130 min-h-120 flex overflow-hidden mt-5 mb-16 md:mb-20 mx-3 sm:mx-7 bg-white rounded-3xl">
@@ -17,7 +39,9 @@ const page = () => {
         />
 
         <div className="relative pl-4 sm:pl-10 md:pl-20 z-10 max-w-3xl pt-12 md:pt-16">
-          <button className="text-white px-5 py-2 rounded-lg bg-[#B52619]">Featured Event</button>
+          <button className="text-white px-5 py-2 rounded-lg bg-[#B52619]">
+            Featured Event
+          </button>
           <h1
             className="text-white text-5xl font-semibold lg:leading-14 pb-2 pt-4 lg:w-[40vw] italic"
             style={{ fontFamily: "var(--font-newsreader)" }}
@@ -32,36 +56,112 @@ const page = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-[50vw] sm:w-full">
             <Link
-               href="/contact"
-               className="bg-white text-[#0a3f13] px-9 py-3 rounded-full font-semibold"
-               >
-                Register Now
+              href="/contact"
+              className="bg-white text-[#0a3f13] px-9 py-3 rounded-full font-semibold"
+            >
+              Register Now
             </Link>
             <Link
-               href="/news"
-               className="bg-transparent border border-white text-white px-9 py-3 rounded-full font-semibold"
-               >
-                Event Details
+              href="/news"
+              className="bg-transparent border border-white text-white px-9 py-3 rounded-full font-semibold"
+            >
+              Event Details
             </Link>
           </div>
         </div>
       </div>
       <Sites />
-      <div className="mx-4 sm:mx-10 lg:mx-20 mt-16 lg:mt-0">
-        <h2 className="font-bold text-4xl  ">News & Events</h2>
-      {newsEvents.map((post) => (
-        <div key={post.id}>
-          <h2 className="">{post.title}</h2>
-          <p className="">Posted By {post.author}</p>
-          <p className="">{post.excerpt}</p>
-          <Link href={post.url} className="">
-            Continue
-          </Link>
+      <main className="max-w-4xl mx-4 sm:mx-10 lg:mx-20 px-6 py-10">
+        <h1 className="text-3xl font-bold mb-6">News & Events</h1>
+
+        {/* POSTS */}
+        <div className="space-y-8">
+          {paginatedPosts.map((post) => {
+            const date = new Date(post.date);
+
+            const month = date.toLocaleString("default", {
+              month: "short",
+            });
+
+            const day = date.getDate();
+            return (
+              <article key={post.id}>
+                <div className="flex flex-col md:flex-row items-center gap-6">
+                  <div className="flex flex-col items-center gap-1 mt-2 bg-[#003629] border border-gray-300 rounded-full pt-3.5">
+                    <div className="text-center leading-tight">
+                      <p className="text-sm font-medium text-[#540505] uppercase bg-[#FFE088] pt-0.5 px-5 rounded-t-xl">{month}</p>
+                      <p className="text-lg font-semibold text-white pb-1 px-5">{day}</p>
+                    </div>
+                  </div>
+                  <div>
+                    <h2 className="text-xl font-medium underline">
+                      {post.title}
+                    </h2>
+                  </div>
+                </div>
+
+                <div className="flex gap-1 items-center mt-2 text-gray-600">
+                  <p>Posted by {post.author} | </p>
+                  <p className="underline flex items-center">
+                    No Comments
+                    <IoIosArrowForward />
+                  </p>
+                </div>
+
+                <div
+                  className="mt-1 text-lg leading-8"
+                  dangerouslySetInnerHTML={{
+                    __html: post.excerpt,
+                  }}
+                />
+
+                <Link
+                  href={`/news/${post.slug}`}
+                  className="inline-block mt-2 underline text-lg"
+                >
+                  Continue...
+                </Link>
+              </article>
+            );
+          })}
         </div>
-      ))}
-    </div>
+
+        {/* PAGINATION */}
+        <div className="flex justify-between mt-16 border-t pt-6">
+          {/* PREVIOUS */}
+          {hasPrev ? (
+            <Link
+              href={`/news?page=${currentPage - 1}`}
+              className="underline text-lg flex items-center gap-1"
+            >
+              <FaArrowLeft />
+              Previous
+            </Link>
+          ) : (
+            <div />
+          )}
+
+          {/* PAGE INFO */}
+          <p className="text-gray-600">
+            Page {currentPage} of {totalPages}
+          </p>
+
+          {/* NEXT */}
+          {hasNext ? (
+            <Link
+              href={`/news?page=${currentPage + 1}`}
+              className="underline text-lg flex items-center gap-1"
+            >
+              Next
+              <FaArrowRight />
+            </Link>
+          ) : (
+            <div />
+          )}
+        </div>
+      </main>
     </>
   );
 };
 
-export default page;
+export default NewsPage;
