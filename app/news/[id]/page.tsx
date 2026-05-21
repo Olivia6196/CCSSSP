@@ -4,8 +4,8 @@ import { getPost, getPosts } from "@/lib/posts";
 import Image from "next/image";
 import Link from "next/link";
 import Sites from "@/app/components/Sites";
-import Form from "@/app/components/Form";
 import CommentsSection from "../CommentsSection";
+import Form from "../Form";
 
 export async function generateStaticParams() {
   const posts = getPosts();
@@ -80,7 +80,7 @@ export default async function SingleNewsPage({ params }: Props) {
         </div>
       </div>
       <Sites />
-      <main className="max-w-4xl mx-4 sm:mx-10 lg:mx-20">
+      <main className="max-w-4xl mx-4 sm:mx-10 lg:mx-20 my-10">
         <div className="flex flex-col gap-2">
           <div className="flex flex-col items-center w-[19vw] md:w-[5vw] gap-1 mt-2 bg-[#003629] border border-gray-300 rounded-full pt-3.5">
             <div className="text-center leading-tight">
@@ -103,7 +103,7 @@ export default async function SingleNewsPage({ params }: Props) {
 
         <article
           className="
-          prose prose-lg w-full 
+          prose prose-lg w-full overflow-x-hidden
              [&_img]:rounded-xl 
              [&_img]:shadow-xl 
              [&_img]:my-8 
@@ -120,7 +120,7 @@ export default async function SingleNewsPage({ params }: Props) {
       </main>
       <CommentsSection comments={post.comments || []} />
       <Form />
-      <div className="my-16 mx-3 sm:mx-10 lg:mx-20 bg-white relative right-[-35vw] md:right-[-75vw]">
+      <div className="my-16 mx-3 sm:mx-10 lg:mx-20 bg-white relative md:right-[-75vw]">
         <Link
           href="/news"
           className="bg-transparent border border-gray-300 text-[#003629] px-9 py-3 rounded-full font-semibold shadow-2xl"

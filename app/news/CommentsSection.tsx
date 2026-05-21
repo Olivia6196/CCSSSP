@@ -4,7 +4,7 @@ import { Comment } from "@/types/post";
 
 export default function CommentsSection({ comments }: { comments: Comment[] }) {
   return (
-    <div className="mt-16 max-w-4xl mx-auto mb-16">
+    <div className="mt-16 max-w-4xl mx-4 sm:mx-10 lg:mx-20 mb-16">
       <h2 className="text-2xl font-semibold mb-8 flex items-center gap-3">
         Comments 
         <span className="text-base font-normal text-gray-500">({comments.length})</span>
@@ -19,8 +19,7 @@ export default function CommentsSection({ comments }: { comments: Comment[] }) {
               key={index}
               className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200"
             >
-              <div className="flex gap-4">
-                {/* Avatar */}
+              <div className="flex flex-col sm:flex-row gap-4">
                 <div className="shrink-0">
                   <div className="w-12 h-12 rounded-full overflow-hidden border border-gray-200">
                     <Image
@@ -44,7 +43,7 @@ export default function CommentsSection({ comments }: { comments: Comment[] }) {
                     </time>
                   </div>
 
-                  <p className="mt-3 text-[17px] leading-relaxed text-gray-700">
+                  <p className="mt-3 text-lg leading-relaxed text-gray-700">
                     {comment.body}
                   </p>
                 </div>

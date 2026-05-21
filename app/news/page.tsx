@@ -86,8 +86,8 @@ const NewsPage = async ({ searchParams }: { searchParams: Props }) => {
             const day = date.getDate();
             return (
               <article key={post.id}>
-                <div className="flex flex-col md:flex-row items-center gap-6">
-                  <div className="flex flex-col items-center gap-1 mt-2 bg-[#003629] border border-gray-300 rounded-full pt-3.5">
+                <div className="flex flex-col md:flex-row md:items-center gap-6">
+                  <div className="flex flex-col items-center w-[19vw] md:w-[5vw] gap-1 mt-2 bg-[#003629] border border-gray-300 rounded-full pt-3.5">
                     <div className="text-center leading-tight">
                       <p className="text-sm font-medium text-[#540505] uppercase bg-[#FFE088] pt-0.5 px-5 rounded-t-xl">{month}</p>
                       <p className="text-lg font-semibold text-white pb-1 px-5">{day}</p>
@@ -102,14 +102,15 @@ const NewsPage = async ({ searchParams }: { searchParams: Props }) => {
 
                 <div className="flex gap-1 items-center mt-2 text-gray-600">
                   <p>Posted by {post.author} | </p>
-                  <p className="underline flex items-center">
+                  <p className="border-b pb-0.5 flex items-center">
                     No Comments
+                    <IoIosArrowForward />
                     <IoIosArrowForward />
                   </p>
                 </div>
 
                 <div
-                  className="mt-1 text-lg leading-8"
+                  className="mt-1 text-lg leading-8 overflow-hidden"
                   dangerouslySetInnerHTML={{
                     __html: post.excerpt,
                   }}
