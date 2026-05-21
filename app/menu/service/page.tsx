@@ -32,7 +32,7 @@ const page = () => {
       <div className="flex flex-col lg:flex-row justify-center gap-10 sm:gap-16 lg:gap-28 mx-4 md:mx-10 mb-24 mt-14">
         <div className="text-justify">
           <h2 className="text-[2rem] font-semibold pb-4">Service Schedule</h2>
-         <ul className="list-disc md:list-inside md:pl-5 text-[1.2rem] leading-8 text-black/90">
+         <ul className="list-disc md:list-inside md:pl-5 ml-4 md:ml-0 text-[1.2rem] leading-8 text-black/90">
             <li>Saturday Vigil: 5:00PM @ St. Stephen's</li>
             <li>Sunday: 8:30am @ St. Patrick's 11:00am @ OLPH</li>
             <li>Monday: 6:00pm @ St. Stephen's</li>
