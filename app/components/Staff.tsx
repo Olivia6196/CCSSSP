@@ -15,15 +15,6 @@ const Staff = () => {
             <li>Ministry Coordinator – Peg Orzel</li>
             <li>Church Organist/Music Director – Jennifer Austin</li>
          </ul>
-         <Link
-            href='https://www.figma.com/proto/PjA6rRrCgOgw2VkltKTjI9/CCSSSP--Copy'
-            className="group relative overflow-hidden border-b text-lg shadow hover:text-white hover:border-0 px-4 py-2 rounded-full transition-all duration-300"
-         >
-            <span className="absolute bg-[#003629] rounded-lg inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-400" />
-            <span className="relative items-center justify-center gap-2 z-10">
-              View Map
-            </span>
-         </Link>
         </div>
   )
 }

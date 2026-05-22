@@ -38,6 +38,18 @@ const page = () => {
       </div>
       <RelatedSite />
     <Staff />
+    <div className="mx-4 sm:mx-10 lg:mx-20 mb-16">
+     <Link
+            href="https://www.google.com/maps/place/St+Patrick's+Church/@42.345223,-75.975008,14z/data=!4m6!3m5!1s0x89da58db68c6e4ed:0x9f47ca65af88a04f!8m2!3d42.3405329!4d-75.9765268!16s%2Fg%2F1tfx5x32?hl=en&entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            className="group relative overflow-hidden border-b text-lg shadow hover:text-white hover:border-0 px-4 py-2 rounded-full transition-all duration-300"
+         >
+            <span className="absolute bg-[#003629] rounded-lg inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-400" />
+            <span className="relative items-center justify-center gap-2 z-10">
+              View Map
+            </span>
+         </Link>
+         </div>
     </>
   )
 }

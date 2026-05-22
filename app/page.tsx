@@ -57,7 +57,7 @@ const page = () => {
     {
       icon: PiClock,
       title:"Mass Times",
-      description:"Saturdays: 4:00 PM (St. Stephen) Sundays: 8:30 AM (St. Patrick) Sundays: 10:30 AM (St. Stephen)",
+      description:"Saturday Vigil 5:00 PM – St. Stephen, Sunday 8:30 AM – St. Patrick, 11:00 AM – Our Lady of Perpetual Help",
       link: "/schedules",
       linkTittle:"FULL SCHEDULE"
     },
@@ -65,14 +65,14 @@ const page = () => {
       icon: PiBookOpenText,
       title:"Latest Bulletin",
       description:"Stay connected with our weekly parish announcements and liturgical updates.",
-      link: "/news",
+      link: "https://www.ccsssp.com/media/olph.pdf",
       linkTittle:"DOWNLOAD PDF"
     },
     {
       icon: MdOutlineChurch,
       title:"Sacraments",
       description:"Inquiry about Baptism, Marriage, or Reconciliation? Find resources and schedules.",
-      link: "/sacrament",
+      link: "/menu/sacrament",
       linkTittle:"LEARN MORE"
     }
   ]
@@ -123,9 +123,11 @@ const page = () => {
              >
               {item.title}
               </h2>
-             <p className="sm:m-auto sm:w-[38vw] lg:w-[20vw] text-[1.1rem] font-medium leading-7 py-6 text-black/80 group-hover:text-white/70 group-hover:italic group-hover:font-light">{item.description}</p>
+             <p className="sm:m-auto sm:w-[38vw] lg:w-[20vw] text-[1rem] font-medium leading-7 py-6 text-black/80 group-hover:text-white/70 group-hover:italic group-hover:font-light">{item.description}</p>
              <Link 
              href={item.link}
+             download={item.linkTittle === "DOWNLOAD PDF" ? true : false}
+             target={item.linkTittle === "DOWNLOAD PDF" ? "_blank" : "_self"}
              className="text-[1.05rem] font-medium text-[#003629] border-b-2 border-[#003629] group-hover:bg-[#FFE088] group-hover:border-0 group-hover:rounded-full group-hover:py-2 group-hover:px-4"
              >
               {item.linkTittle}

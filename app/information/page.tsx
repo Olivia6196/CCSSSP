@@ -67,14 +67,18 @@ const page = () => {
                 <ul className="list-disc list-inside text-[1.25rem] text-black/90 pb-6 pl-5 underline">
                     <li>
                         <Link
-                        href=""
+                        href="https://www.ccsssp.com/wp-content/uploads/2018/02/St-Patricks-History.pdf"
+                        download
+                        target="_blank"
                         >
                             St Patrick's Church History
                         </Link>
                     </li>
                     <li>
                          <Link
-                        href=""
+                        href="https://www.ccsssp.com/wp-content/uploads/2018/02/St-Stephens-History.pdf"
+                        download
+                        target="_blank"
                         >
                             St Stephen's Church History
                         </Link>
