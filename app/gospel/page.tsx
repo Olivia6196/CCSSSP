@@ -1,6 +1,43 @@
 import Image from "next/image";
 import Sites from "../components/Sites";
 import GospelPage from "../components/livingGospel/GospelPage";
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  title: "Living the Gospel – Faith Formation, Outreach & Sacraments",
+  description:
+    "Discover our vibrant Gospel Ministries – RCIA, Religious Education, Sacramental Preparation, Liturgical Ministries, and Outreach programs rooted in Catholic faith and service.",
+  keywords: [
+    "Gospel Ministries",
+    "Catholic Faith Formation",
+    "RCIA",
+    "Religious Education",
+    "Sacramental Preparation",
+    "Liturgical Ministries",
+    "Catholic Outreach",
+    "Food Pantry",
+    "St. Vincent de Paul",
+     "Catholic Community of St. Stephen’s - St. Patrick’s Parish"
+  ],
+  openGraph: {
+    title: "Living the Gospel – Faith in Action",
+    description: "Living the Gospel through formation, service, and worship.",
+    url: "https://www.ccsssp.com/gospel", //the actual url of the page
+    images: [
+      {
+        url: "/images/gospel.png",
+        width: 567,
+        height: 382,
+        alt: "Gospel Ministries",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://www.ccsssp.com/gospel",
+  },
+};
+
 
 const page = () => {
   return (

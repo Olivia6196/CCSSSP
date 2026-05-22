@@ -4,6 +4,48 @@ import Sites from "../components/Sites";
 import { getPosts } from "@/lib/posts";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "News & Events | upcoming events, celebrations and parish activities.",
+  description:
+    "Stay updated with the latest news, upcoming events, celebrations, meetings, and parish activities at St. Stephen-St. Patrick Catholic Parish. Join our community gatherings and annual events.",
+  keywords: [
+    "News & Events",
+    "Catholic Church Events",
+    "Catholic Celebrations",
+    "Annual Harvest",
+    "Church News",
+    "Community Events",
+    "Faith Based Events",
+    "Parish Activities",
+  ],
+  openGraph: {
+    title: "News & Events | Church News, Upcoming Events & Celebrations",
+    description:
+      "Latest news, upcoming events, celebrations and parish activities.",
+    url: "https://www.ccsssp.com/news",  //actual url of the page
+    siteName: "St. Stephen-St. Patrick Catholic Parish",
+    images: [
+      {
+        url: "/images/annual_harvest.png",  
+        width: 1200,
+        height: 630,
+        alt: "Annual Harvest Celebration - St. Stephen-St. Patrick Catholic Parish",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "News & Events | St. Stephen-St. Patrick Catholic Parish",
+    description: "Stay updated with parish news and upcoming events",
+  },
+  alternates: {
+    canonical: "https://www.ccsssp.com/news",
+  },
+};
 
 const POSTS_PER_PAGE = 25;
 

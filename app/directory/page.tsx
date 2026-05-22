@@ -1,6 +1,49 @@
 import Image from "next/image"
 import RelatedSite from "../components/RelatedSite"
 import Link from "next/link"
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Parish Directory | St. Stephen-St. Patrick",
+  description:
+    "Find our Parish Directory, staff contacts, ministry leaders, and photo gallery. Connect with our community at St. Stephen-St. Patrick Catholic Parish in Whitney Point, NY.",
+  keywords: [
+    "Parish Directory",
+    "St. Stephen St. Patrick Parish Directory",
+    "Whitney Point Catholic Church Directory",
+    "Church Staff Directory",
+    "Ministry Leaders",
+    "Parish Photo Gallery",
+    "Catholic Parish Whitney Point NY",
+    "Church Contacts",
+    "St. Stephen-St. Patrick Directory",
+  ],
+  openGraph: {
+    title: "Parish Directory | St. Stephen-St. Patrick",
+    description:
+      "Access our parish directory, connect with staff and ministry leaders, and view our photo gallery.",
+    url: "https://www.ccsssp.com/directory",
+    siteName: "St. Stephen-St. Patrick Catholic Parish",
+    images: [
+      {
+        url: "/images/parish_directory.png",   // Using your hero image
+        width: 1200,
+        height: 630,
+        alt: "Parish Directory - St. Stephen-St. Patrick",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Parish Directory | St. Stephen-St. Patrick",
+    description: "Staff, ministry leaders, and community directory",
+  },
+  alternates: {
+    canonical: "https://www.ccsssp.com/directory",
+  },
+};
 
 const page = () => {
   return (

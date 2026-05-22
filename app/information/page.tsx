@@ -1,6 +1,53 @@
 import Image from "next/image"
 import RelatedSite from "../components/RelatedSite"
 import Link from "next/link"
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Church Information & Parish History | St. Stephen-St. Patrick",
+  description:
+    "Learn about the Catholic Community of St. Stephen-St. Patrick in Whitney Point, NY. Parish history, Children's Liturgy of the Word, Prayer Chain, Food Pantry, support for the sick, military prayer list, and new parishioner registration.",
+  keywords: [
+    "St. Stephen St. Patrick Parish",
+    "Whitney Point Catholic Church",
+    "Church Information",
+    "Parish History",
+    "St. Patrick's Church History",
+    "St. Stephen's Church History",
+    "Children's Liturgy of the Word",
+    "Prayer Chain",
+    "Ecumenical Food Pantry",
+    "Military Prayer List",
+    "Intentions of the Sick",
+    "New Parishioner Registration",
+    "Whitney Point NY Catholic",
+  ],
+  openGraph: {
+    title: "Church Information & Parish History",
+    description:
+      "Discover the history, ministries, and ways to get involved at St. Stephen-St. Patrick Catholic Parish in Whitney Point, New York.",
+    url: "https://www.ccsssp.com/information",
+    siteName: "St. Stephen-St. Patrick Catholic Parish",
+    images: [
+      {
+        url: "/images/history_of_faith.png",
+        width: 1200,
+        height: 630,
+        alt: "A Living History of Faith - St. Stephen-St. Patrick Parish",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Church Information | St. Stephen-St. Patrick",
+    description: "Parish history, ministries, and important information",
+  },
+  alternates: {
+    canonical: "https://www.ccsssp.com/information",
+  },
+};
 
 const page = () => {
     const information = [

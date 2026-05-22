@@ -1,7 +1,6 @@
 import Image from "next/image"
 import RelatedSite from "../../RelatedSite"
 import Link from "next/link"
-import Staff from "../../Staff"
 
 const page = () => {
   return (
