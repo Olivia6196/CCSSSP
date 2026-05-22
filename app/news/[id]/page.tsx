@@ -37,7 +37,7 @@ export default async function SingleNewsPage({ params }: Props) {
 
   return (
     <>
-      <div className="relative lg:h-130 min-h-80 flex overflow-hidden mt-5 mb-16 md:mb-20 mx-3 sm:mx-7 bg-white rounded-3xl">
+      <div className="relative lg:h-130 min-h-90 flex overflow-hidden mt-5 mb-16 md:mb-20 mx-3 sm:mx-7 bg-white rounded-3xl">
         <Image
           src="/images/annual_harvest.png"
           alt="Events"
@@ -47,12 +47,12 @@ export default async function SingleNewsPage({ params }: Props) {
           quality={90}
         />
 
-        <div className="relative pl-4 sm:pl-10 md:pl-20 z-10 max-w-3xl pt-12 md:pt-16">
+        <div className="relative pl-4 sm:pl-10 lg:pl-20 z-10 max-w-3xl pt-12 md:pt-16">
           <button className="text-white px-5 py-2 rounded-lg bg-[#B52619]">
             Featured Event
           </button>
           <h1
-            className="text-white text-5xl font-semibold lg:leading-16 pb-2 pt-4 italic"
+            className="text-white text-3xl md:text-5xl font-semibold lg:leading-16 pb-2 pt-4 italic"
             style={{ fontFamily: "var(--font-newsreader)" }}
           >
              Upcoming Events/
@@ -60,7 +60,7 @@ export default async function SingleNewsPage({ params }: Props) {
              Celebrations/Meetings
           </h1>
 
-          <p className="text-white/75 lg:w-lg font-semibold text-[1.05rem] leading-7 pb-6">
+          <p className="text-white/75 lg:w-lg font-semibold text-[1.05rem] pr-2 leading-7 pb-6">
             Join us for an evening of fellowship, live music, and community
             fundraising as we celebrate the bountiful blessings of our parish
             family.
@@ -108,7 +108,7 @@ export default async function SingleNewsPage({ params }: Props) {
       </main>
       <CommentsSection comments={post.comments || []} />
       <Form />
-      <div className="my-16 mx-3 sm:mx-10 lg:mx-20 bg-white relative md:right-[-75vw]">
+      <div className="my-16 mx-3 sm:mx-10 lg:mx-20 bg-white relative md:right-[-65vw]">
         <Link
           href="/news"
           className="bg-transparent border border-gray-300 text-[#003629] px-9 py-3 rounded-full font-semibold shadow-2xl"
