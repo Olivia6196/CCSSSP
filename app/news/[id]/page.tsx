@@ -37,7 +37,7 @@ export default async function SingleNewsPage({ params }: Props) {
 
   return (
     <>
-      <div className="relative lg:h-130 min-h-120 flex overflow-hidden mt-5 mb-16 md:mb-20 mx-3 sm:mx-7 bg-white rounded-3xl">
+      <div className="relative lg:h-130 min-h-80 flex overflow-hidden mt-5 mb-16 md:mb-20 mx-3 sm:mx-7 bg-white rounded-3xl">
         <Image
           src="/images/annual_harvest.png"
           alt="Events"
@@ -52,10 +52,12 @@ export default async function SingleNewsPage({ params }: Props) {
             Featured Event
           </button>
           <h1
-            className="text-white text-5xl font-semibold lg:leading-14 pb-2 pt-4 lg:w-[40vw] italic"
+            className="text-white text-5xl font-semibold lg:leading-16 pb-2 pt-4 italic"
             style={{ fontFamily: "var(--font-newsreader)" }}
           >
-            Annual Parish Harvest Gala
+             Upcoming Events/
+             <br />
+             Celebrations/Meetings
           </h1>
 
           <p className="text-white/75 lg:w-lg font-semibold text-[1.05rem] leading-7 pb-6">
@@ -63,20 +65,6 @@ export default async function SingleNewsPage({ params }: Props) {
             fundraising as we celebrate the bountiful blessings of our parish
             family.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-[50vw] sm:w-full">
-            <Link
-              href="/contact"
-              className="bg-white text-[#0a3f13] px-9 py-3 rounded-full font-semibold"
-            >
-              Register Now
-            </Link>
-            <Link
-              href="/news"
-              className="bg-transparent border border-white text-white px-9 py-3 rounded-full font-semibold"
-            >
-              Event Details
-            </Link>
-          </div>
         </div>
       </div>
       <Sites />

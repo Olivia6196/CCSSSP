@@ -107,7 +107,7 @@ const Navbar = () => {
             className="bg-white w-4/5 max-w-sm h-full mr-auto shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="p-6 border-b flex items-center">
+            <div className="p-6 border-b flex items-end">
               <button onClick={() => setIsMobileMenuOpen(false)}>
                 <IoMdClose className="text-4xl text-gray-600" />
               </button>
