@@ -39,12 +39,12 @@ const Navbar = () => {
           width={121.51}
           height={121}
         />
-        <p
+        <h1
           className="text-[2.3rem] text-white leading-none"
           style={{ fontFamily: "var(--font-playfair-display)" }}
         >
           Catholic Community of St. Stephen’s - St. Patrick’s
-        </p>
+        </h1>
       </header>
 
       {/* Main Navbar */}

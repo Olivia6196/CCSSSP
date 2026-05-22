@@ -101,11 +101,11 @@ const page = () => {
               <div className="absolute inset-0 bg-[#003629b2]" />
 
               <div className="relative px-5  md:pl-20 z-10 max-w-3xl">
-                <h1 className="text-white text-3xl sm:text-5xl font-semibold md:leading-16 pb-6 sm:pb-2"
+                <h2 className="text-white text-3xl sm:text-5xl font-semibold md:leading-16 pb-6 sm:pb-2"
                 style={{ fontFamily: "var(--font-newsreader)" }}
                 >
                   {slide.title}
-                </h1>
+                </h2>
 
                 <p className="text-white/75 w-full sm:w-lg font-semibold text-[1.05rem] leading-7">{slide.description}</p>
               </div>
