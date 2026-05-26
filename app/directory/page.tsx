@@ -75,6 +75,7 @@ const page = () => {
                 <Link
                 href="https://www.figma.com/exit?url=https%3A%2F%2Fom319443.onlineolanmills.com%2F"
                 className="text-[1.24rem] font-medium text-black/70 underline"
+                target="_blank"
                 >
                   https://om319443.onlineolanmills.com
                 </Link>

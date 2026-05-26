@@ -104,16 +104,16 @@ const Navbar = () => {
           onClick={() => setIsMobileMenuOpen(false)}
         >
           <div
-            className="bg-white w-4/5 max-w-sm h-full mr-auto shadow-xl"
+            className="bg-white w-4/5 max-w-sm h-full ml-auto shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="p-6 border-b flex items-end">
+            <div className="p-4 relative right-[-60vw] sm:right-[-40vw]">
               <button onClick={() => setIsMobileMenuOpen(false)}>
-                <IoMdClose className="text-4xl text-gray-600" />
+                <IoMdClose className="text-4xl text-[#003629]" />
               </button>
             </div>
 
-            <nav className="flex flex-col p-6 space-y-1">
+            <nav className="flex flex-col p-6 space-y-1 border-t">
               {navLinks.map((item) => (
                 <Link
                   key={item.label}
