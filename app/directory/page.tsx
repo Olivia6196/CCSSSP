@@ -73,7 +73,7 @@ const page = () => {
                 <h2 className="text-4xl font-semibold pb-8">Directory</h2>
                 <p className="text-[1.24rem] font-medium text-black/70 pb-3 md:pb-1">Our Parish Directory can be found at the following address:</p>
                 <Link
-                href="https://www.figma.com/exit?url=https%3A%2F%2Fom319443.onlineolanmills.com%2F"
+                href="https://om319443.onlineolanmills.com/"
                 className="text-[1.24rem] font-medium text-black/70 underline"
                 target="_blank"
                 >

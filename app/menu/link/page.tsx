@@ -7,43 +7,43 @@ const page = () => {
     const links =[
         {
             label:"3 Minute Retreat",
-            href:"https://www.figma.com/exit?url=http%3A%2F%2Fwww.loyolapress.com%2F3-minute-retreats-daily-online-prayer.htm"
+            href:"https://www.loyolapress.com/3-minute-retreats-daily-online-prayer/"
         },
         {
             label:"Catholic News",
-            href:"https://www.figma.com/exit?url=http%3A%2F%2Fwww.zenit.org%2Findex.php%3Fl%3Denglish"
+            href:"https://zenit.org/?l=english"
         },
         {
             label:"Catholic Online",
-            href:"https://www.figma.com/exit?url=http%3A%2F%2Fwww.catholic.org%2F"
+            href:"https://www.catholic.org/"
         },
         {
             label:"Diocese Of Syracuse",
-            href:"https://www.figma.com/exit?url=http%3A%2F%2Fwww.syrdio.org%2F"
+            href:"https://syracusediocese.org/"
         },
         {
             label:"Lord, Teach Me to Pray",
-            href:"https://www.figma.com/exit?url=http%3A%2F%2Fwww.cptryon.org%2Fprayer%2F"
+            href:"https://cptryon.org/prayer/"
         },
         {
             label:"MassTimes.org",
-            href:"https://www.figma.com/exit?url=http%3A%2F%2Fwww.masstimes.org%2F"
+            href:"https://masstimes.org/"
         },
         {
             label:"National Conference of Bishops",
-            href:"https://www.figma.com/exit?url=http%3A%2F%2Fwww.nccbuscc.org%2F"
+            href:"https://dukcapil.kemendagri.com/"
         },
         {
             label:"New America Bible",
-            href:"https://www.figma.com/exit?url=http%3A%2F%2Fwww.nccbuscc.org%2Fnab%2Fbible"
+            href:"https://www.usccb.org/offices/new-american-bible/books-bible"
         },
         {
             label:"Saint of the Day",
-            href:"https://www.figma.com/exit?url=http%3A%2F%2Fwww.americancatholic.org%2FFeatures%2FSaintofDay%2F"
+            href:"https://www.catholic.org/saints/"
         },
         {
             label:"Today's Reading",
-            href:"https://www.figma.com/exit?url=http%3A%2F%2Fwww.usccb.org%2Fnab%2Ftoday.shtml"
+            href:"https://bible.usccb.org/"
         },
     ]
   return (
