@@ -82,6 +82,7 @@ const page = () => {
             <Link
              href={item.href}
              className="border-b pb-0.5"
+             target="_blank"
             >
                 {item.label}
             </Link>
