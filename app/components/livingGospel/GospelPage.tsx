@@ -11,6 +11,8 @@ import {
 } from "react-icons/md";
 import { PiBookOpenText } from "react-icons/pi";
 import Serves from "./Serves";
+import { TypeAnimation } from "react-type-animation";
+
 
 const GospelPage = () => {
   const faithFormation = [
@@ -75,13 +77,17 @@ const GospelPage = () => {
     <>
       <div className="min-h-screen bg-white font-sans mx-3 sm:mx-10 lg:mx-16">
         <div className=" text-[#003629] border-l-4 border-[#CBA72F] pl-5 mb-5 ml-4 mt-14">
-          <p
-            className="text-2xl font-semibold py-5"
-            style={{ fontFamily: "var(--font-newsreader)" }}
-          >
-            "As each has received a gift, use it to serve one another, as good
-            stewards of God's varied grace."
-          </p>
+          <TypeAnimation
+          sequence={[
+            `"As each has received a gift, use it to serve one another, as good stewards of God's varied grace."`,
+            2000
+          ]}
+          wrapper="span"
+          speed={50}
+          repeat={Infinity}
+          className="text-2xl font-semibold py-5"
+          style={{ fontFamily: "var(--font-newsreader)" }}
+          />
           <p className="text-[#B52619] font-medium pb-4">— 1 Peter 4:10</p>
         </div>
 

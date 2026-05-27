@@ -1,56 +1,116 @@
+import { Easing, motion } from 'framer-motion';
 import Image from "next/image";
 
 const Message = () => {
+  const containerVariant = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.25,
+        delayChildren: 0.1,
+      }
+    }
+  };
+
+  const itemVariant = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.9, ease: "ease-out" as Easing }
+    }
+  };
+
+  const imageVariant = {
+    hidden: { opacity: 0, scale: 0.92, y: 30 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: { duration: 1.1, ease: "ease-out" as Easing }
+    }
+  };
+
   return (
     <div className="flex flex-col lg:flex-row justify-center gap-2 sm:gap-20 px-4 sm:px-12 lg:px-20 mb-20 md:mb-28">
-      <div className="relative">
-        <Image
-          src="/images/rev.png"
-          alt="A Rev.fr"
-          width={528}
-          height={660}
-          className="rounded-3xl"
-        />
-        <p className="hidden sm:absolute bottom-[-3vw] right-[3vw] lg:right-[-4vw]  bg-[#540505] px-6 py-14 rounded-4xl text-white w-[25vw] lg:w-[15vw] sm:flex flex-col text-[1.3rem] tracking-wide">
-          <span
-            className="text-[#FFE088] text-4xl mb-[-1vw]"
-            style={{ fontFamily: "var(--font-newsreader)" }}
-          >
+      
+      {/* Left Side - Image */}
+      <motion.div
+        className="relative"
+        variants={imageVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, margin: "-100px" }}
+      >
+        <motion.div>
+          <Image
+            src="/images/rev.png"
+            alt="A Rev.fr"
+            width={528}
+            height={660}
+            className="rounded-3xl"
+            priority
+          />
+        </motion.div>
+
+        {/* Floating Quote */}
+        <motion.p
+          className="hidden sm:absolute bottom-[-3vw] right-[3vw] lg:right-[-4vw] bg-[#540505] px-6 py-14 rounded-4xl text-white w-[25vw] lg:w-[15vw] sm:flex flex-col text-[1.3rem] tracking-wide"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7, duration: 1 }}
+          viewport={{ once: false }}
+        >
+          <span className="text-[#FFE088] text-4xl mb-[-1vw]" style={{ fontFamily: "var(--font-newsreader)" }}>
             "
           </span>
           Welcome to our spiritual family.
-        </p>
-      </div>
-      <div className="pt-24">
-        <h2
+        </motion.p>
+      </motion.div>
+
+      {/* Right Side - Text */}
+      <motion.div
+        className="pt-24"
+        variants={containerVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, margin: "-80px" }}
+      >
+        <motion.h2
+          variants={itemVariant}
           className="text-3xl font-semibold text-[#003629] pb-6"
           style={{ fontFamily: "var(--font-newsreader)" }}
         >
           A Message from our Rev. Fr
-        </h2>
-        <p className="border-l-3 border-[#CBA72F] lg:w-[37vw] pl-8 tracking-wide leading-9 text-sm font-semibold text-black/70 mb-8">
-          <span
-            className="text-[#735C00] font-medium text-2xl italic"
-            style={{ fontFamily: "var(--font-newsreader)" }}
-          >
+        </motion.h2>
+
+        <motion.p
+          variants={itemVariant}
+          className="border-l-3 border-[#CBA72F] lg:w-[37vw] pl-8 tracking-wide leading-9 text-sm font-semibold text-black/70 mb-8"
+        >
+          <span className="text-[#735C00] font-medium text-2xl italic" style={{ fontFamily: "var(--font-newsreader)" }}>
             "Behold, how good and pleasant it is when brothers dwell in unity!"
           </span>
           <br />— PSALM 133:1
-        </p>
-        <p className="lg:w-[42.5vw] font-medium text-[1.1rem] text-black/60">
+        </motion.p>
+
+        <motion.p variants={itemVariant} className="lg:w-[42.5vw] font-medium text-[1.1rem] text-black/60">
           It is a joy to welcome you to our community. Whether you are a
           lifelong parishioner or searching for a spiritual home, we invite you
           to experience the sacraments and the warmth of our parish life.
-        </p>
-        <p className="lg:w-[42vw] font-medium text-[1.1rem] text-black/60 pt-6 py-8">
+        </motion.p>
+
+        <motion.p variants={itemVariant} className="lg:w-[42vw] font-medium text-[1.1rem] text-black/60 pt-6 py-8">
           Our community is built on the traditions of St. Stephen and St.
           Patrick —faith, service, and hospitality. We look forward to meeting
           you at the altar.
-        </p>
-        <p className="font-bold text-[#003629]">
+        </motion.p>
+
+        <motion.p variants={itemVariant} className="font-bold text-[#003629]">
           Fr. Thomas O'Malley, Pastor
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
     </div>
   );
 };

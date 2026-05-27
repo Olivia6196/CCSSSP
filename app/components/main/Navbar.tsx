@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <>
       {/* Top Header - Unchanged */}
-      <header className="hidden h-28 lg:flex bg-[#1B4D3E] justify-center items-center gap-6">
+      <header className="hidden h-28 lg:flex bg-[#1B4D3E] justify-center items-center gap-3">
         <Image
           src="/images/logo.png"
           alt="Logo image"
